@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 80px;
+            background: #002d62;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .sidebar .active {
+            background: #004aad;
+            border-radius: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 8px 16px;
+            border: none;
+            background: lightgray;
+            cursor: pointer;
+        }
+        .tab.active {
+            background: blue;
+            color: white;
+        }
+        .add-user {
+            margin-left: auto;
+            padding: 8px 16px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid lightgray;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">☰</div>
+        <ul>
+            <li>🏠</li>
+            <li>📄</li>
+            <li class="active">👥</li>
+            <li>📊</li>
+            <li>📑</li>
+        </ul>
+    </div>
+    <div class="content">
+        <header>
+            <h2>Gerenciamento</h2>
+        </header>
+        <div class="filter">
+            <label for="area">Área:</label>
+            <select id="area">
+                <option>B2B</option>
+            </select>
+            <button class="tab active">Usuários</button>
+            <button class="tab">Prazos</button>
+            <button class="add-user">+ Adicionar Usuário</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuários</th>
+                    <th>E-mail</th>
+                    <th>Área</th>
+                    <th>Tipo de acesso</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rodrigo Lima De Oliveira</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Admin</td>
+                    <td><a href="#">Editar</a> | <a href="#">Remover</a></td>
+                </tr>
+                <tr>
+                    <td>Luiza Da Cunha Macedo</td>
+                    <td>ldcmacedo@timbrasil.com.br</td>
+                    <td>B2B</td>
+                    <td>User</td>
+                    <td><a href="#">Editar</a> | <a href="#">Remover</a></td>
+                </tr>
+                <tr>
+                    <td>Jacqueline Menin</td>
+                    <td>-</td>
+                    <td>B2B</td>
+                    <td>User</td>
+                    <td><a href="#">Editar</a> | <a href="#">Remover</a></td>
+                </tr>
+                <tr>
+                    <td>Felipe Gianolla</td>
+                    <td>fegianolla@timbrasil.com.br</td>
+                    <td>B2B</td>
+                    <td>User</td>
+                    <td><a href="#">Editar</a> | <a href="#">Remover</a></td>
+                </tr>
+                <tr>
+                    <td>Guilherme Kopke Nascimento</td>
+                    <td>gknascimento@timbrasil.com.br</td>
+                    <td>B2B</td>
+                    <td>User</td>
+                    <td><a href="#">Editar</a> | <a href="#">Remover</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
